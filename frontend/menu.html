@@ -1,0 +1,45 @@
+<header>
+    <link rel="stylesheet" href="css/menu.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            Care Compass
+        </div>
+        
+        <!-- Hamburger icon for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <!-- Menu items -->
+        <ul class="menu">
+            <li><a href="index.html" target="_parent">Home</a></li>
+            <li><a href="about.html" target="_parent">About Us</a></li>
+            <li class="dropdown">
+                <a href="services.html" target="_parent">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="medical-tests.html" target="_parent">Medical Tests</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="portal.html" target="_parent">Patient Portal</a>
+                <ul class="dropdown-menu">
+                    <li><a href="feedback.html" target="_parent">Feedback and Queries</a></li>
+                    <li><a href="appointment.html" target="_parent">My Appointment</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" target="_parent">Contact Us</a></li>
+            <li id="admin-link">
+                <a href="./admin/admin-panel.html" target="_parent">Admin Panel</a>
+            </li>           
+            <li><a href="login.html" onclick="signOut()" target="_parent">Sign Out</a></li> 
+            <li><a href="userprofile.html" target="_parent">My Profile</a></li>
+        </ul>
+    </nav>
+    
+    <script src="js/script.js"></script>
+</header>
+

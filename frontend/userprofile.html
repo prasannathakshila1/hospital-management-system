@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional User Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f2f5;
+        }
+
+        .profile-container {
+            display: flex;
+            gap: 2rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            max-width: 800px;
+            width: 100%;
+            margin: 20px;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        .profile-sidebar {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-picture .edit-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #007bff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .profile-picture .edit-overlay:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .info-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f2f5;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .profile-title {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .info-item:hover {
+            transform: translateX(5px);
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: #007bff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .info-content {
+            flex: 1;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-value {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .action-button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .primary-button {
+            background: #007bff;
+            color: white;
+        }
+
+        .secondary-button {
+            background: #f0f2f5;
+            color: #1a1a1a;
+        }
+
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                padding: 1.5rem;
+            }
+
+            .profile-sidebar {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-sidebar">
+            <div class="profile-picture">
+                <img src="./assets/img/profile.png" alt="Profile Picture">
+                <div class="edit-overlay">
+                    <i class="fas fa-camera"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-info">
+            <div class="info-header">
+                <h1 class="profile-name" id="patientName">Loading...</h1>
+                <div class="profile-title" id="patientRole">Loading...</div>
+            </div>
+    
+            <div class="info-section">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-label">Email Address</div>
+                        <div class="info-value" id="patientEmail">Loading...</div>
+                    </div>
+                </div>
+    
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-label">Account Created</div>
+                        <div class="info-value" id="patientCreatedAt">Loading...</div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="profile-actions">
+                <button class="action-button primary-button">
+                    <i class="fas fa-edit"></i>
+                    Edit Profile
+                </button>
+                <button class="action-button secondary-button">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.querySelector('.edit-overlay').addEventListener('click', function() {
+            // Add image upload logic here
+            alert('Upload new profile picture');
+        });
+
+        document.querySelector('.primary-button').addEventListener('click', function() {
+            // Add edit profile logic here
+            alert('Edit profile details');
+        });
+
+        document.querySelector('.secondary-button').addEventListener('click', function() {
+            // Add settings logic here
+            alert('Open settings');
+        });
+        async function fetchPatientDetails(uuid) {
+    try {
+        // Make the request to the backend
+        const response = await fetch(`http://localhost/backend/routes/user.php`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                action: 'getUserByUUID',
+                uuid: uuid
+            })
+        });
+
+        const data = await response.json();
+        console.log('User data:', data.user); // Log the complete user data
+
+        // Check if the response is successful
+        if (data.success) {
+            // Update the HTML elements with the patient data
+            document.getElementById('patientName').textContent = data.user.name || 'Not Available';
+            document.getElementById('patientEmail').textContent = data.user.email || 'Not Available';
+            document.getElementById('patientCreatedAt').textContent = new Date(data.user.created_at).toLocaleDateString() || 'Not Available';
+            document.getElementById('patientRole').textContent = data.user.role || 'Not Available';
+        } else {
+            // Handle error if user is not found
+            console.error('Error fetching user:', data.message);
+            alert('User not found');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error fetching the patient details');
+    }
+}
+
+// Get the UUID from sessionStorage
+const userID = sessionStorage.getItem('userUUID');
+
+// Example usage: Call the function with the UUID from sessionStorage
+fetchPatientDetails(userID);
+
+
+    </script>
+</body>
+</html>

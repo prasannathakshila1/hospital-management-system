@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #3b8d99;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Container for Main Content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Admin Section */
+.admin-section {
+    margin-top: 30px;
+}
+
+.admin-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3b8d99;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+td {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+/* Action Buttons */
+button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3b8d99;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #338080;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}

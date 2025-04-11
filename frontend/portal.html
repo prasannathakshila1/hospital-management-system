@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+    <header>
+        <iframe src="menu.html" style="width: 100%; border: none;"></iframe>
+    </header>
+    <div class="container">
+        <div class="header">
+            <div class="patient-info">
+                <div class="info-card">
+                    <h3>Patient Details</h3>
+                    <p id="patientName">John Doe</p>
+                    <p id="patientEmail">john@example.com</p>
+                    <p id="patientPhone">0742403149</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="appointments">
+            <h2>Your Appointments</h2>
+            <div id="appointmentsList">
+                <!-- Appointments will be populated here -->
+            </div>
+            <!-- Buttons to navigate to other pages -->
+            <div class="appointment-buttons">
+                <a href="appointment.html" class="btn btn-view">Book Appointment</a>
+                <a href="medical-tests.html" class="btn btn-edit">Show Medical Report</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Detail Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <img id="modalDoctorImage" src="" alt="Doctor's photo" class="doctor-avatar">
+                <div class="modal-header-info">
+                    <h2 id="modalDoctorName"></h2>
+                    <p id="modalDoctorSpecialization"></p>
+                    <span class="status-badge status-upcoming">Upcoming</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="detail-group">
+                    <h4>Session ID</h4>
+                    <p id="modalSessionId"></p>
+                </div>
+                <div class="detail-group">
+                    <h4>Branch</h4>
+                    <p id="modalBranch"></p>
+                </div>
+                <div class="detail-group">
+                    <h4>Date</h4>
+                    <p id="modalDate"></p>
+                </div>
+                <div class="detail-group">
+                    <h4>Time</h4>
+                    <p id="modalTime"></p>
+                </div>
+                <div class="detail-group">
+                    <h4>Doctor ID</h4>
+                    <p id="modalDoctorId"></p>
+                </div>
+                <div class="detail-group">
+                    <h4>Doctor Status</h4>
+                    <p id="modalDoctorStatus"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/portal.js"></script>
+</body>
+</html>
+    
+
+
+<p><strong>Address:</strong>
+    <p>123, Main Street, Colombo, Sri Lanka</p>
+    <p> 20180, Uda Peradeniya, Kandy, Sri Lanka</p>
+    <p> 110, Rajapihilla Rd , Kurunegala, Sri Lanka</p>
+</p>
+  

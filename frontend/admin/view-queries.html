@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/view-queries.css">
+    <title>Query Management Dashboard</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Query Management Dashboard</h1>
+            <input type="text" class="search-box" placeholder="Search queries..." id="searchInput">
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-group">
+                <label>Date Range:</label>
+                <input type="date" id="dateFrom">
+                <span>to</span>
+                <input type="date" id="dateTo">
+            </div>
+            <div class="filter-group">
+                <label>Sort By:</label>
+                <select id="sortSelect">
+                    <option value="date">Date</option>
+                    <option value="id">ID</option>
+                    <option value="userId">User ID</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="queryTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">ID</th>
+                        <th onclick="sortTable(1)">Message</th>
+                        <th onclick="sortTable(2)">User ID</th>
+                        <th onclick="sortTable(3)">Date</th>
+                        <th onclick="sortTable(4)">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="queryTableBody">
+                    <!-- Sample row with animations -->
+                    <tr>
+                        <td>#1001</td>
+                        <td class="tooltip" data-tooltip="View full message">Need help with appointment booking...</td>
+                        <td>USER001</td>
+                        <td>Feb 18, 2024</td>
+                        <td>
+                            <div class="status-cell">
+                                <span class="status-indicator"></span>
+                                <span class="response-time fast">2m response</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination" id="pagination">
+            <button disabled>Previous</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+        </div>
+    </div>
+
+    <script src="../js/view-queries.js"></script>
+</body>
+</html>

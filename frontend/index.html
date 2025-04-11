@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Compass Hospitals</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/send-message.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            Care Compass
+        </div>
+        <ul class="menu">
+            <li><a href="index.html" target="_parent">Home</a></li>
+            <li><a href="about.html" target="_parent">About Us</a></li>
+            <li class="dropdown">
+                <a href="services.html" target="_parent">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="medical-tests.html">Medical Tests</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="portal.html" target="_parent">Patient Portal</a>
+                <ul class="dropdown-menu">
+                    <li><a href="feedback.html" target="_parent">Feedback and Queries</a></li>
+                    <li><a href="appointment.html" target="_parent">My Appointment</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" target="_parent">Contact Us</a></li>
+            <li id="admin-link">
+                <a href="./admin/admin-panel.html" target="_parent">Admin Panel</a>
+            </li>           
+            <li><a href="login.html" onclick="signOut()" target="_parent">Sign Out</a></li> 
+        </ul>
+    </nav>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your Health, Our Priority</h1>
+            <p>Schedule appointments with top healthcare professionals in just a few clicks.</p>
+            <button class="cta-button" onclick="window.location.href='appointment.html'">Book Appointment</button>
+        </div>
+        <div class="doctor-animation"></div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-user-md"></i>
+                <h3>Expert Doctors</h3>
+                <p>Access to specialized healthcare professionals</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Easy Scheduling</h3>
+                <p>Book appointments at your convenience</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-clinic-medical"></i>
+                <h3>Modern Facilities</h3>
+                <p>State-of-the-art medical equipment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Icon and Dialog -->
+    <div class="chat-icon" onclick="toggleChat()">
+        <i>💬</i>
+    </div>
+
+    <div class="chat-dialog">
+        <div class="chat-header">
+            <span>Hospital Support</span>
+            <span class="close-chat" onclick="toggleChat()">×</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+        <div class="quick-replies">
+            <button class="quick-reply" onclick="handleQuickReply('Hey')">Hey</button>
+            <button class="quick-reply" onclick="handleQuickReply('Appointment')">Book Appointment</button>
+            <button class="quick-reply" onclick="handleQuickReply('Report Problem')">Report Problem</button>
+            <button class="quick-reply" onclick="handleQuickReply('Hours')">Working Hours</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" placeholder="Type your message..." id="chatInput">
+            <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="js/send-message.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

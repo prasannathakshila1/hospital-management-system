@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/reports.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upload-container">
+            <h2>Patient Report Upload</h2>
+            
+            <div class="form-group" style="--delay: 1">
+                <label for="user">Select User</label>
+                <select id="user" required onchange="loadUserDocuments()">
+                    <option value="">Choose a user</option>
+                </select>
+            </div>
+
+            <div class="form-group" style="--delay: 2">
+                <label for="reportType">Report Type</label>
+                <select id="reportType" required>
+                    <option value="">Select report type</option>
+                    <option value="lab">Laboratory Report</option>
+                    <option value="xray">X-Ray Report</option>
+                    <option value="mri">MRI Report</option>
+                    <option value="ct">CT Scan Report</option>
+                </select>
+            </div>
+            <div class="form-group" style="--delay: 4">
+                <label for="description">Description</label>
+                <textarea id="description" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group" style="--delay: 5">
+                <label for="status">Report Status</label>
+                <select id="status" required>
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+            
+            <div class="form-group" style="--delay: 6">
+                <label for="doctorName">Doctor's Name</label>
+                <input type="text" id="doctorName">
+            </div>
+            
+            <div class="form-group" style="--delay: 7">
+                <label for="patientName">Patient's Name</label>
+                <input type="text" id="patientName">
+            </div>
+            
+            <div class="form-group" style="--delay: 8">
+                <label for="testResults">Test Results</label>
+                <textarea id="testResults" rows="3"></textarea>
+            </div>
+            
+            <div class="form-group" style="--delay: 9">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" rows="3"></textarea>
+            </div>
+            
+
+            <div class="form-group" style="--delay: 3">
+                <label for="reportDate">Report Date</label>
+                <input type="date" id="reportDate" required>
+            </div>
+
+            <div class="form-group">
+                <div class="file-upload" id="dropZone">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop your file here or click to browse</p>
+                    <p class="small">(Supported formats: PDF, JPG, PNG)</p>
+                    <input type="file" id="fileInput" hidden accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+            </div>
+            
+
+            <button id="submitButton">Submit</button>
+            <div class="success-message" id="successMessage">
+                Report uploaded successfully! ✓
+            </div>
+        </div>
+    </div>
+    <script src="../js/reports.js"></script>
+</body>
+</html>

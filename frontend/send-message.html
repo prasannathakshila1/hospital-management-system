@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Chat Bot</title>
+     <link rel="stylesheet" href="css/send-message.css">
+</head>
+<body>
+    <div class="chat-icon" onclick="toggleChat()">
+        <i>💬</i>
+    </div>
+
+    <div class="chat-dialog">
+        <div class="chat-header">
+            <span>Hospital Support</span>
+            <span class="close-chat" onclick="toggleChat()">×</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Typing indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+        <div class="quick-replies">
+            <button class="quick-reply" onclick="handleQuickReply('Hey')">Hey</button>
+            <button class="quick-reply" onclick="handleQuickReply('Appointment')">Book Appointment</button>
+            <button class="quick-reply" onclick="handleQuickReply('Report Problem')">Report Problem</button>
+            <button class="quick-reply" onclick="handleQuickReply('Hours')">Working Hours</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" placeholder="Type your message..." id="chatInput">
+            <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="js/send-message.js"></script>
+</body>
+</html>

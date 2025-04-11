@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Session Booking</title>
+  <link rel="stylesheet" href="../css/doctor-session.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Manage Doctor Sessions</h1>
+
+    <!-- Doctor Selection -->
+    <div class="input-group">
+      <label for="doctor">Choose a Doctor:</label>
+      <select id="doctor" name="doctor">
+        <option value="">Select a doctor</option>
+        <!-- The doctors will be populated dynamically -->
+      </select>
+    </div>
+
+    <!-- Branch Selection -->
+    <div class="input-group">
+      <label for="branch">Choose a Branch:</label>
+      <select id="branch" name="branch">
+        <option value="kandy">Kandy</option>
+        <option value="colombo">Colombo</option>
+        <option value="kurunegala">Kurunegala</option>
+      </select>
+    </div>
+
+    <!-- Date and Time Selection -->
+    <div class="input-group">
+      <label for="date">Choose a Date:</label>
+      <input type="date" id="date" name="date">
+    </div>
+
+    <div class="input-group">
+      <label for="start-time">Start Time:</label>
+      <input type="time" id="start-time" name="start-time">
+    </div>
+
+    <div class="input-group">
+      <label for="end-time">End Time:</label>
+      <input type="time" id="end-time" name="end-time">
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button class="btn" id="submit">Book Appointment</button>
+      <button class="btn" id="update">Update Session</button>
+      <button class="btn btn-danger" id="delete">Delete Session</button>
+    </div>
+
+    <!-- Session ID for update/delete (hidden) -->
+    <input type="hidden" id="session-id">
+
+    <!-- Notification Area -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Sessions List -->
+    <h2>Current Sessions</h2>
+    <table id="sessions-table">
+      <thead>
+        <tr>
+          <th>Doctor</th>
+          <th>Branch</th>
+          <th>Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Session rows will be populated dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../js/doctor-session.js"></script>
+</body>
+</html>

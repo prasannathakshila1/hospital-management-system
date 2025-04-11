@@ -1,0 +1,100 @@
+{
+    "hey": [
+        "Hey! How can I help you today?",
+        "Welcome! What brings you to Care Compass Hospitals today?",
+        "Hello! I'm here to assist you with any questions about our services."
+    ],
+    "appointment": [
+        "I can help you book an appointment. Please specify your preferred department:",
+        "1. General Medicine\n2. Cardiology\n3. Orthopedics\n4. Pediatrics\n5. Dental",
+        "Would you like me to help you schedule an appointment with one of our specialists?",
+        "Click here to book your appointment: <a href='appointment.html' target='_blank'>Book Appointment</a>"
+    ],
+    "hours": [
+        "Our hospital is open 24/7 for emergencies.",
+        "Regular consultation hours are:\nMonday-Friday: 9:00 AM - 6:00 PM\nSaturday: 9:00 AM - 2:00 PM\nSunday: Closed for regular consultations"
+    ],
+    "problem": [
+        "I understand you want to report a problem. Could you please provide more details?",
+        "I'll make sure your issue is recorded and addressed by our team.",
+        "Thank you for bringing this to our attention. Our patient care team will review this shortly."
+    ],
+    "help": [
+        "I'm here to assist you! You can ask about appointment bookings, hospital hours, or report any issues.",
+        "Feel free to ask me anything about our hospital services or report any concerns you have."
+    ],
+    "location": [
+        "Care Compass Hospitals has branches in Kandy, Colombo, and Kurunegala. Would you like directions to any of these locations?",
+        "You can visit our hospital branches at:\n1. Kandy\n2. Colombo\n3. Kurunegala. Let me know which one you'd like more information about!"
+    ],
+    "emergency": [
+        "In case of an emergency, please call our emergency number: 123-456-7890.",
+        "For emergencies, our hospital is available 24/7. Please proceed to the nearest ER."
+    ],
+    "thank you": [
+        "You're welcome! If you need further assistance, feel free to ask.",
+        "Glad I could help! Let me know if you need anything else."
+    ],
+    "services": [
+        "We offer a variety of services at Care Compass Hospitals, including:\n1. General Medicine\n2. Cardiology\n3. Orthopedics\n4. Pediatrics\n5. Dental Care\n6. Medical Tests & Lab Services",
+        "Care Compass Hospitals provides a wide range of services such as appointment scheduling, medical treatment, and access to your medical records online. How can I assist you with our services today?"
+    ],
+    "register": [
+        "To register for medical services, please visit our registration page on the website. I can assist you with the steps if needed.",
+        "You can easily register for medical services by filling out the registration form on our website. Would you like the link to the registration page?"
+    ],
+    "doctor": [
+        "Our doctors are highly qualified and specialize in various fields. You can view detailed profiles of our doctors, including their specialties and qualifications on our website.",
+        "We have a list of doctors with their specialties and qualifications. Would you like me to provide more details on a specific doctor?"
+    ],
+    "lab results": [
+        "You can access your lab results through your patient account on our website. If you need help finding them, I can guide you.",
+        "Lab results can be accessed via your patient portal on our website. Do you need help with this?"
+    ],
+    "medical test": [
+        "Our hospital offers a variety of medical tests and lab services. Would you like more information on the specific tests we offer?",
+        "We provide several medical tests, including blood tests, X-rays, and more. You can find detailed information on our website."
+    ],
+    "query": [
+        "You can submit your queries regarding medical services and tests through the website's query form. Let me know if you'd like assistance with this.",
+        "Feel free to submit any questions or concerns you may have, and our team will get back to you. Would you like to proceed with submitting a query?"
+    ],
+    "feedback": [
+        "We value your feedback! Please share your thoughts or suggestions with us.",
+        "Your feedback helps us improve our services. What can we do better?",
+        "Thank you for your feedback! We strive to provide the best service possible."
+    ],
+    "payment": [
+        "For payment information, please visit our billing page. I can help you with the steps if needed.",
+        "You can check your payment status or make a payment through our online portal. Let me know if you need assistance.",
+        "If you have questions about your bill or payment, please feel free to ask."
+    ],
+    "insurance": [
+        "Care Compass Hospitals accepts several types of insurance. Would you like to know if we accept your insurance provider?",
+        "We can assist you with insurance-related inquiries. Please let me know if you need help with your coverage."
+    ],
+    "health tips": [
+        "Here are some health tips to keep in mind:\n1. Stay hydrated\n2. Eat a balanced diet\n3. Exercise regularly",
+        "Remember to prioritize your health. Take breaks, stay active, and eat well for a happy, healthy life!"
+    ],
+    "careers": [
+        "We are always looking for talented individuals to join our team. Would you like to know about open positions?",
+        "Interested in working with us? Visit our careers page to see job openings or inquire about available positions."
+    ],
+    "news": [
+        "Stay updated with the latest news from Care Compass Hospitals! We have new services and promotions coming soon.",
+        "Did you know? We're expanding our services to include new specialties. Stay tuned for more updates!"
+    ],
+    "newsletter": [
+        "Would you like to subscribe to our newsletter for updates on health tips, promotions, and news?",
+        "Sign up for our newsletter to receive the latest news, health tips, and special offers right in your inbox."
+    ],
+    "faq": [
+        "For frequently asked questions, please visit our FAQ page. Let me know if you need more help with anything.",
+        "Have questions? Check our FAQ section or ask me directly, and I'll assist you!"
+    ],
+    "contact": [
+        "You can contact us directly at our helpline: 123-456-7890 or send an email to info@carecompass.com.",
+        "For any inquiries, feel free to reach out to us at info@carecompass.com or call 123-456-7890."
+    ]
+}

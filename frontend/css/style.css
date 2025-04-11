@@ -1,0 +1,262 @@
+@keyframes backgroundSlide {
+    0% {
+        background-image: url('../assets/img/chanel.jpg');
+    }
+    33% {
+        background-image: url('../assets/img/chanel2.jpg');
+    }
+    67% {
+        background-image: url('../assets/img/chanel3.jpg');
+    }
+    100% {
+        background-image: url('../assets/img/chanel4.jpg');
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: white;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Style for the menu */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Make sure the dropdown menu is hidden by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Places it below the parent item */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px; /* Ensures the menu has a minimum width */
+    z-index: 999; /* Ensures it appears above other elements */
+    border-radius: 4px; /* Adds rounded corners for a smoother look */
+}
+
+/* Style for each item in the dropdown menu */
+.dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1rem; /* Adds spacing and makes it easier to click */
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for each dropdown item */
+.dropdown-menu li a:hover {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 4px; /* Adds rounded corners to items on hover */
+}
+
+/* Optional: Add a transition to the dropdown for smoother appearance */
+.dropdown-menu {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+}
+
+
+
+.hero {
+    height: 100vh;
+    animation: backgroundSlide 20s infinite;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;  /* Ensures the background image covers the entire container */
+    background-repeat: no-repeat;  /* Prevents the background from repeating */
+}
+.hero-content {
+    width: 50%;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.services {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.services h2 {
+    color: #1e3a8a;
+    margin-bottom: 3rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .doctor-animation {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

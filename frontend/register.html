@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ <link rel="stylesheet" href="css/register.css">
+    <script src="js/register.js" defer></script>
+</head>
+<body>
+
+<main>
+    <div class="registration-wrapper">
+        <div class="image-container">
+            <img src="assets/img/register.jpg" alt="Registration Image">
+        </div>
+        <div class="form-container">
+            <h2>Create an Account</h2>
+            <p class="description">Sign up to get started with our amazing service. We promise it's worth it!</p>
+            <form action="#" method="post" class="registration-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    <small class="error-message" id="name-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                    <small class="error-message" id="email-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <small class="error-message" id="password-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    <small class="error-message" id="confirm-password-error"></small>
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
