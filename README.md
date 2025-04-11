@@ -17,5 +17,4 @@ This is a web-based Hospital Management System built with **HTML**, **CSS**, **J
 - **Backend:** PHP
 - **Database:** MySQL (optional if used)
 
-## 📁 Project Structure
 
